@@ -1,7 +1,8 @@
-# NoisyWikihow Dataset
-A benchmark of controlled noise for Event Intention Classification.
+# Noisywikihow Dataset
+a Benchmark for Learning with Real-world Noisy Labels in Natural Language Processing
 
 ## Data
+### Structure
 + data
     + wikihow           Noisywikihow Dataset
         + noisy/        The input folder
@@ -13,5 +14,18 @@ A benchmark of controlled noise for Event Intention Classification.
                 +   Take `(step_id, noisy_label)` as input.
             + {tail,uncommon,neighbor}_0.1.csv  Train data with different noise sources. Format is the same as `mix_0.1.csv`.
         + cat158.csv    The choosen 158 event intention classes.
+
+### Fields description
+
+| Field         | Description                                                  |
+| ------------- | ------------------------------------------------------------ |
+| `choosen_id`  | **global id** for this sample. range from 0~89142            |
+| `step`        | The real step text.                                          |
+| `step_id`     | The id for `step`                                            |
+| `cat`         | The real event intention category text.                      |
+| `cat_id`      | The id for `cat`                                             |
+| `noisy_step`  | The **corrupted** step text with **certain noise rate**. It may be agree with `step`,  may not either. |
+| `noisy_cat`   | For noise on labels(`sym`, etc.):  The **corrupted** event intention label with **certain noise rate**. It may be agree with `cat`,  may not either.<br />For similar noisy steps(`mix`,`tail`,`uncommon`,`neighbor`):  The event intention category correspond to `noisy step`. |
+| `noisy_label` | The id for `noisy_cat`. `-1` for the category out of given 158 classes (OOV class). |
 
 Put this folder under `Noisywikihow/data` and rename as `wikihow` before running!
