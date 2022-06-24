@@ -12,7 +12,6 @@ A benchmark of controlled noise for Event Intention Classification.
             + sym_{0.1,0.2,0.4,0.6}.csv         Train data with symmetric noise. Format `choosen_id,step_id,cat_id,noisy_label,step,cat,noisy_cat`.
                 +   Take `(step_id, noisy_label)` as input.
             + {tail,uncommon,neighbor}_0.1.csv  Train data with different noise sources. Format is the same as `mix_0.1.csv`.
-        + embedding     Preprocessed step embeddings for each models.
         + cat158.csv    The choosen 158 event intention classes.
 
-Put this folder under Noisywikihow/data before running!
+Put this folder under `Noisywikihow/data` and rename as `wikihow` before running!
