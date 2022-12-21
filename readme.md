@@ -7,6 +7,8 @@ a Benchmark for Learning with Real-world Noisy Labels in Natural Language Proces
     + wikihow           Noisywikihow Dataset
         + noisy/        The input folder
             + train.csv                         The clean train data. Format `choosen_id, step_id, cat_id, step, cat`
+            + val_test.csv                      The clean validation and test data, will split into `val.csv`, `test.csv`
+            + val.csv                           The clean validation data. Format `choosen_id, step_id, cat_id, step, cat`
             + test.csv                          The clean test data. Format `choosen_id, step_id, cat_id, step, cat`
             + mix_{0.1,0.2,0.4,0.6}.csv         Noisywikihow train data with noise. Format `choosen_id, step_id, noisy_id, cat_id, step, cat, noisy_step, noisy_cat, noisy_label`.
                 +   Take `(noisy_id, cat_id)` as input.
@@ -14,6 +16,7 @@ a Benchmark for Learning with Real-world Noisy Labels in Natural Language Proces
                 +   Take `(step_id, noisy_label)` as input.
             + {tail,uncommon,neighbor}_0.1.csv  Train data with different noise sources. Format is the same as `mix_0.1.csv`.
         + cat158.csv    The choosen 158 event intention classes.
+        + split_val_test.py     The code for splitting val set and test set.
 
 ### Fields description
 
