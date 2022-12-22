@@ -1,10 +1,10 @@
-# Noisywikihow Dataset
+# NoisywikiHow Dataset
 a Benchmark for Learning with Real-world Noisy Labels in Natural Language Processing
 
 ## Data
 ### Structure
 + data
-    + wikihow           Noisywikihow Dataset
+    + wikihow           NoisywikiHow Dataset
         + noisy/        The input folder
             + train.csv                         The clean train data. Format `choosen_id, step_id, cat_id, step, cat`
             + val_test.csv                      The clean validation and test data, will split into `val.csv`, `test.csv`
