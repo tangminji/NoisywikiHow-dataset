@@ -10,7 +10,7 @@ a Benchmark for Learning with Real-world Noisy Labels in Natural Language Proces
             + val_test.csv                      The clean validation and test data, will split into `val.csv`, `test.csv`
             + val.csv                           The clean validation data. Format `choosen_id, step_id, cat_id, step, cat`
             + test.csv                          The clean test data. Format `choosen_id, step_id, cat_id, step, cat`
-            + mix_{0.1,0.2,0.4,0.6}.csv         Noisywikihow train data with noise. Format `choosen_id, step_id, noisy_id, cat_id, step, cat, noisy_step, noisy_cat, noisy_label`.
+            + mix_{0.1,0.2,0.4,0.6}.csv         NoisywikiHow Train data with noise. Format `choosen_id, step_id, noisy_id, cat_id, step, cat, noisy_step, noisy_cat, noisy_label`.
                 +   Take `(noisy_id, cat_id)` as input.
             + sym_{0.1,0.2,0.4,0.6}.csv         Train data with symmetric noise. Format `choosen_id,step_id,cat_id,noisy_label,step,cat,noisy_cat`.
                 +   Take `(step_id, noisy_label)` as input.
@@ -31,4 +31,4 @@ a Benchmark for Learning with Real-world Noisy Labels in Natural Language Proces
 | `noisy_cat`   | For noise on labels(`sym`, etc.):  The **corrupted** event intention label with **certain noise rate**. It may be agree with `cat`,  may not either.<br />For similar noisy steps(`mix`,`tail`,`uncommon`,`neighbor`):  The event intention category correspond to `noisy step`. |
 | `noisy_label` | The id for `noisy_cat`. `-1` for the category out of given 158 classes (OOV class). |
 
-Put this folder under `Noisywikihow/data` and rename as `wikihow` before running!
+Put this folder under `NoisywikiHow/data` and rename as `wikihow` before running!
