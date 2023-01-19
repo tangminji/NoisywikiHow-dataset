@@ -6,17 +6,18 @@ a Benchmark for Learning with Real-world Noisy Labels in Natural Language Proces
 + data
     + wikihow           NoisywikiHow Dataset
         + noisy/        The input folder
-            + train.csv                         The clean train data. Format `choosen_id, step_id, cat_id, step, cat`
-            + val_test.csv                      The clean validation and test data, will split into `val.csv`, `test.csv`
+            + train.csv                         The clean training data. Format `choosen_id, step_id, cat_id, step, cat`
             + val.csv                           The clean validation data. Format `choosen_id, step_id, cat_id, step, cat`
-            + test.csv                          The clean test data. Format `choosen_id, step_id, cat_id, step, cat`
-            + mix_{0.1,0.2,0.4,0.6}.csv         NoisywikiHow Train data with noise. Format `choosen_id, step_id, noisy_id, cat_id, step, cat, noisy_step, noisy_cat, noisy_label`.
+            + test.csv                          The clean testing data. Format `choosen_id, step_id, cat_id, step, cat`
+            + mix_{0.1,0.2,0.4,0.6}.csv         **NoisywikiHow** training data with real-world label noise for main trial "Analysis the LNL methods on real-world label noise" in Section 4.2 and Section 4.4.
+                +   Format `choosen_id, step_id, noisy_id, cat_id, step, cat, noisy_step, noisy_cat, noisy_label`.
                 +   Take `(noisy_id, cat_id)` as input.
-            + sym_{0.1,0.2,0.4,0.6}.csv         Train data with symmetric noise. Format `choosen_id,step_id,cat_id,noisy_label,step,cat,noisy_cat`.
+            + sym_{0.1,0.2,0.4,0.6}.csv         Comparative training data with symmetric label noise for trial "Analysis the LNL methods on real-world label noise" in Section 4.5. 
+                +   Format `choosen_id,step_id,cat_id,noisy_label,step,cat,noisy_cat`.
                 +   Take `(step_id, noisy_label)` as input.
-            + {tail,uncommon,neighbor}_0.1.csv  Train data with different noise sources. Format is the same as `mix_0.1.csv`.
+            + {tail,uncommon,neighbor}_0.1.csv  Training data with different noise sources of real-world noise for trial "Analysis the LNL methods under different noise source" in Section 4.3.
+                +   Format is the same as `mix_0.1.csv`.
         + cat158.csv    The choosen 158 event intention classes.
-        + split_val_test.py     The code for splitting val set and test set.
 
 ### Fields description
 
