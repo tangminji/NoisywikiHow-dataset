@@ -24,9 +24,9 @@ a Benchmark for Learning with Real-world Noisy Labels in Natural Language Proces
 | Field         | Description                                                  |
 | ------------- | ------------------------------------------------------------ |
 | `choosen_id`  | **global id** for this sample. range from 0~89142            |
-| `step`        | The real step text.                                          |
+| `step`        | **The procedual event.** The real step text.                 |
 | `step_id`     | The id for `step`                                            |
-| `cat`         | The real event intention category text.                      |
+| `cat`         | A plausible **intention** toward the event. TheThe real event intention category text. |
 | `cat_id`      | The id for `cat`                                             |
 | `noisy_step`  | The **corrupted** step text with **certain noise rate**. It may be agree with `step`,  may not either. |
 | `noisy_cat`   | For noise on labels(`sym`, etc.):  The **corrupted** event intention label with **certain noise rate**. It may be agree with `cat`,  may not either.<br />For similar noisy steps(`mix`,`tail`,`uncommon`,`neighbor`):  The event intention category correspond to `noisy step`. |
